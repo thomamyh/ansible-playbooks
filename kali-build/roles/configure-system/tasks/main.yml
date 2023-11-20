@@ -1,0 +1,4 @@
+---
+- include_tasks: "change-keyboard-layout.yml"
+- include_tasks: "change-timezone.yml"
+- include_tasks: "setup-symlinks.yml"

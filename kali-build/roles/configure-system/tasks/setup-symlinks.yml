@@ -1,0 +1,12 @@
+---
+- name: "Setup symlinks for config files"
+  ansible.builtin.file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: "{{ user_to_create }}"
+    group: "{{ user_to_create }}"
+    state: link
+  loop:
+    - { src: "/opt/config-files/.vimrc", dest: "/home/{{ user_to_create }}/.vimrc"}
+    - { src: "/opt/config-files/.tmux.conf", dest: "/home/{{ user_to_create }}/.tmux.conf"}
+    - { src: "/opt/config-files/.aliases", dest: "/home/{{ user_to_create }}/.aliases"}

@@ -1,0 +1,4 @@
+---
+# vars file for create-user
+user_to_create: "change_this"
+password: "change_this"

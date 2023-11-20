@@ -1,0 +1,4 @@
+---
+- name: Change timezone
+  ansible.builtin.shell:
+    cmd: timedatectl set-timezone Europe/Oslo

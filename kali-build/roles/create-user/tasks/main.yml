@@ -1,0 +1,11 @@
+---
+# tasks file for create-user
+- name: "Create user"
+  ansible.builtin.user:
+    name: "{{ user_to_create }}"
+    password: "{{ password }}"
+    shell: /bin/bash
+
+- name: "Set fact for created user"
+  ansible.builtin.set_fact:
+    user_to_create: "{{ user_to_create }}"

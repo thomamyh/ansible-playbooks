@@ -1,0 +1,6 @@
+---
+- name: Change keyboard layout from English to Norwegian
+  ansible.builtin.lineinfile:
+    path: /etc/default/keyboard
+    regexp: 'XKBLAYOUT=".*"'
+    line: 'XKBLAYOUT="no"'

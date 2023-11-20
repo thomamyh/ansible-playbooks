@@ -1,0 +1,9 @@
+---
+- name: "Customizing Kali"
+  hosts: localhost
+  connection: local
+  become: yes
+  roles:
+    - role: "roles/create-user"
+    - role: "roles/install-tools"
+    - role: "roles/configure-system"

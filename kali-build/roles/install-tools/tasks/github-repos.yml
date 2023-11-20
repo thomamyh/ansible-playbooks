@@ -1,0 +1,7 @@
+---
+- name: Clone github repos
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+  loop:
+    - { repo: "https://github.com/thomamyh/config-files.git", dest: "/opt/config-files" }

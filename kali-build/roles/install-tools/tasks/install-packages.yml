@@ -1,0 +1,7 @@
+---
+# tasks file for install-tools
+- name: "Install packages"
+  ansible.builtin.package:
+    name:
+      - jq
+    state: latest
